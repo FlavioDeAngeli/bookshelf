@@ -5,7 +5,7 @@
         <div class="collapse navbar-collapse ms-3" id="navbarNav">
             <ul class="navbar-nav"> 
                 <li class="nav-item">
-                    <a class="nav-link" href="books">Library</a>
+                    <a class="nav-link" href="library">Library</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="authors">Authors</a>
