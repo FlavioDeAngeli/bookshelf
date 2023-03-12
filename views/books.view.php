@@ -8,7 +8,7 @@ require('layout/navbar.php');
     </div>
     <div class="list-group ps-2 pe-2 mt-3">
         <?php foreach ($books as $book) {
-            echo "<a href='#' class='list-group-item list-group-item-action'>"
+            echo "<a href='book?id=".$book['id'] . "' class='list-group-item list-group-item-action'>"
             . $book['title'] ." - " . $book['name'] . " " . $book['surname'] ." - " . $book['year'] ." - " . $book['category'] . "</a>";
         } ?>
     </div>
