@@ -1,24 +1,6 @@
 <?php
 require("layout/head.php");
 require("layout/navbar.php");
-
-class Database {
-    public function query()
-    {
-        $dsn = "mysql:host=localhost;port=3306;dbname=bookshelf;user=root;charset=utf8mb4";
-
-        $pdo = new PDO($dsn);
-
-        $statement = $pdo->prepare("SELECT books.title, authors.name, authors.surname, books.year, categories.category FROM books JOIN authors ON books.author_id = authors.id JOIN categories ON books.category_id = categories.id");
-
-        $statement->execute();
-
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
-    }
-}
-
-$db = new Database();
-$books = $db->query();
 ?>
 <main>
     <div class="container-fluid ps-4 mt-3">
