@@ -1,3 +1,3 @@
 <?php
-require "../views/insertbooks.view.php";
+require "./views/insertbooks.view.php";
 ?>
