@@ -9,7 +9,7 @@ require("layout/navbar.php");
     <div class="list-group ps-2 pe-2 mt-3">
         <?php foreach ($books as $book) {
             echo "<a href='book?id=".$book['id'] . "' class='list-group-item list-group-item-action'>"
-            . $book['title'] ." - " . $book['name'] . " " . $book['surname'] ." - " . $book['year'] ." - " . $book['category'] . "</a>";
+            . htmlspecialchars($book['title'])  ." - " . htmlspecialchars($book['name']) . " " . htmlspecialchars($book['surname']) ." - " . $book['year'] ." - " . $book['category'] . "</a>";
         } ?>
     </div>
 </main>

@@ -2,18 +2,9 @@
 //When our project is in a different path from the root (in this case bookshelf) we'll need
 //a '.htaccess' file that specifies the correct path for redirect in order to make router work
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$routes = require('routes.php');
 
-$routes = [
-    "/bookshelf/" => "controllers/index.php",
-    "/bookshelf/index.php" => "controllers/index.php",
-    "/bookshelf/authors" => "controllers/authors.php",
-    "/bookshelf/author" => "controllers/author.php",
-    "/bookshelf/library" => "controllers/library.php",
-    "/bookshelf/book" => "controllers/book.php",
-    "/bookshelf/insertbooks" => "controllers/insertbooks.php",
-    "/bookshelf/searchbooks" => "controllers/searchbooks.php",
-];
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 function controllerRoute($uri, $routes) {
 
